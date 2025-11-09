@@ -6,6 +6,7 @@ def preprocess():
     dataset = pd.read_csv("./dataset-2025-10-18_17-04-01.csv")
     pruned_dataset: pd.DataFrame = dataset.loc[
         (dataset["area_sqm"] <= 400)
+        & (dataset["area_sqm"] >= 50)
         & (dataset["price_tomans"] <= 40_000_000_000)
         & (dataset["price_tomans"] >= 1_000_000_000)
         & (dataset["year_built"] >= 1370)
