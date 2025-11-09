@@ -5,7 +5,7 @@ import pandas as pd
 neighborhoods_df = pd.read_csv("./neighborhoods_table.csv", index_col="neighborhood")
 neighborhood_price_means = neighborhoods_df["neighborhood_price_mean"]
 
-model = joblib.load("./polynamial_features_linear_regression_d5.joblib")
+model = joblib.load("./polynamial_features_linear_regression_d2.joblib")
 
 data_point = np.array(
     [
